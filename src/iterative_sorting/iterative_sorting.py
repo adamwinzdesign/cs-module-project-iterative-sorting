@@ -7,6 +7,7 @@ def selection_sort(arr):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
+        # check values for smallest value, if new value is less, reset smallest_index
         for j in range(cur_index + 1, len(arr)):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
@@ -52,7 +53,7 @@ def bubble_sort(arr):
 # The total range of data we'll be sorting sits between 0 and maximum 
 # O(max + n) 
 # O(max) space complexity 
-def counting_sort(arr, maximum=-1):
+def count_sort(arr, maximum=-1):
     if len(arr) == 0: #O(1)
         return arr #O(1)
     
@@ -84,6 +85,6 @@ def counting_sort(arr, maximum=-1):
 
     return arr
 
-arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+# arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
 
-print(counting_sort(arr1))
+# print(counting_sort(arr1))
